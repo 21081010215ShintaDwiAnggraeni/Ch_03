@@ -49,6 +49,11 @@
       "id": 10,
       "task": "Ke rumah Sabrina",
       "complete": false
+    },
+    {
+      "task": "Meja",
+      "complete": true,
+      "id": 11
     }
   ]
 }
