@@ -3,9 +3,9 @@ import TodoItem from './TodoItem';
 import Swal from 'sweetalert2/dist/sweetalert2.js';
 
 const TodoList = ({ isRefresh, setRefresh }) => {
-  const [todos, setTodos] = useState([]);
-  const [search, setSearch] = useState('');
-  const [filter, setFilter] = useState('all');
+  const [todos, setTodos] = useState([])
+  const [search, setSearch] = useState('')
+  const [filter, setFilter] = useState('all')
 
   const handleClick = (title) => {
     Swal.fire({
@@ -32,7 +32,7 @@ const TodoList = ({ isRefresh, setRefresh }) => {
         .catch((err) => {
           setRefresh(false);
           if (err.name === 'AbortError') {
-            console.log('fetch aborted.');
+            console.log('fetch aborted.')
           }
         });
     }
@@ -45,16 +45,15 @@ const TodoList = ({ isRefresh, setRefresh }) => {
   return (
     <>
       <div id="todo-header" className="header">
-        <h2>Search</h2>
-        <input type="text" onChange={(e) => setSearch(e.target.value)} placeholder="Search Todo..." />
+        <h2>Search and Filter</h2>
+        <input type="text" onChange={(e) => setSearch(e.target.value)} placeholder="Search and Filter..." />
         <span className="add-button">Search</span>
       </div>
       <div className="listButton">
         <button
           className="btn-filter"
           onClick={() => {
-            handleClick('Item berhasil Menampilkan Semua List!');
-            setFilter('all');
+            setFilter('all')
           }}
         >
           All
@@ -62,8 +61,7 @@ const TodoList = ({ isRefresh, setRefresh }) => {
         <button
           className="btn-filter"
           onClick={() => {
-            handleClick('Item berhasil Menampilkan List yang Sudah Selesai!');
-            setFilter('complete');
+            setFilter('complete')
           }}
         >
           Done
@@ -71,8 +69,7 @@ const TodoList = ({ isRefresh, setRefresh }) => {
         <button
           className="btn-filter"
           onClick={() => {
-            handleClick('Item berhasil Menampilkan List yang Harus di Lakukan!');
-            setFilter('todo');
+            setFilter('todo')
           }}
         >
           Todo
@@ -81,7 +78,7 @@ const TodoList = ({ isRefresh, setRefresh }) => {
       <ul id="todo-list">
         {filteredData
           .filter((item) => {
-            return search.toLowerCase() === '' ? item : item.task.toLowerCase().includes(search);
+            return search.toLowerCase() === '' ? item : item.task.toLowerCase().includes(search)
           })
           .map((todo) => (
             <TodoItem todo={todo} key={todo.id} setRefresh={setRefresh} />

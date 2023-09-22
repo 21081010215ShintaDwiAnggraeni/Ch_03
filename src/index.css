@@ -33,7 +33,7 @@ ul li {
 
 /* Set all odd list items to a different color (zebra-stripes) */
 ul li:nth-child(odd) {
-  background: #f9f9f9;
+  background: #dbd7d7;
 }
 
 /* Darker background-color on hover */
@@ -43,8 +43,7 @@ ul li:hover {
 
 /* When clicked on, add a background color and strike out text */
 ul li.checked {
-  background: #bd32a8;
-  color: #fff;
+  color: #d9384c;
   text-decoration: line-through;
 }
 
@@ -78,18 +77,16 @@ ul li.checked::before {
 }
 
 .edit:hover {
-  background-color: #84f5ef;
   color: white;
 }
 
 .close:hover {
-  background-color: #84f5ef;
   color: white;
 }
 
 /* Style the header */
 .header {
-  background-color: rgb(22, 163, 181);
+  background-color: #16a3b5;
   padding: 30px 40px;
   color: white;
   text-align: center;
@@ -126,6 +123,34 @@ input {
   border-radius: 0;
 }
 
+.add-new {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+  margin-left: 15rem;
+}
+
+.add-back {
+  padding: 10px;
+  width: 55%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+  margin-top: 20px;
+}
+
 .add-button:hover {
   background-color: #bbb;
 }
@@ -138,7 +163,7 @@ input {
 }
 
 .btn-filter {
-  background-color: rgb(56, 217, 102);
+  background-color: #16a3b5;
   border: 1px solid transparent;
   border-radius: 3px;
   box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0 0 inset;
@@ -156,17 +181,12 @@ input {
   position: relative;
   text-align: center;
   text-decoration: none;
-  user-select: none;
   -webkit-user-select: none;
+  user-select: none;
   touch-action: manipulation;
   vertical-align: baseline;
   white-space: nowrap;
   width: 6em;
-}
-
-.btn-filter:hover,
-.btn-filter:focus {
-  background-color: #07c;
 }
 
 .btn-filter:focus {

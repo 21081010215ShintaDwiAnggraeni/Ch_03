@@ -1,54 +1,49 @@
 {
   "todos": [
     {
-      "id": 1,
       "task": "Nyuci mobil",
-      "complete": true
+      "complete": false,
+      "id": 1
     },
     {
-      "id": 2,
       "task": "Memberi makan kucing",
-      "complete": true
+      "complete": false,
+      "id": 2
     },
     {
-      "id": 3,
       "task": "Olahraga 10 menit",
-      "complete": false
+      "complete": true,
+      "id": 3
     },
     {
-      "id": 4,
       "task": "Sarapan sereal",
-      "complete": true
+      "complete": false,
+      "id": 4
     },
     {
-      "id": 5,
       "task": "Belanja harian",
-      "complete": false
+      "complete": true,
+      "id": 5
     },
     {
-      "id": 6,
       "task": "Ngeprint tugas",
-      "complete": true
+      "complete": false,
+      "id": 6
     },
     {
-      "id": 7,
       "task": "Bayar tagihan bulanan",
-      "complete": true
+      "complete": false,
+      "id": 7
     },
     {
-      "id": 8,
-      "task": "Berangkat kuliah",
-      "complete": false
+      "task": "makan roti",
+      "complete": true,
+      "id": 8
     },
     {
-      "id": 9,
-      "task": "Les bahasa Inggris",
-      "complete": true
-    },
-    {
-      "id": 10,
-      "task": "Ke rumah Sabrina",
-      "complete": false
+      "task": "yoga",
+      "complete": false,
+      "id": 9
     }
   ]
 }

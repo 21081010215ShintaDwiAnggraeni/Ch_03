@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import Swal from 'sweetalert2/dist/sweetalert2.js';
 
 const TodoItem = ({ todo, setRefresh }) => {
-  const [isEditing, setIsEditing] = useState(false);
-  const [editedtask, setEditedtask] = useState(todo.task);
+  const [isEditing, setIsEditing] = useState(false)
+  const [editedtask, setEditedtask] = useState(todo.task)
 
   const handleClick = (title) => {
     Swal.fire({
@@ -25,8 +25,8 @@ const TodoItem = ({ todo, setRefresh }) => {
       },
       body: JSON.stringify(todo),
     }).then(() => {
-      console.log('todo updated.');
-      setRefresh(true);
+      console.log('todo updated.')
+      setRefresh(true)
     });
   };
 
@@ -34,17 +34,17 @@ const TodoItem = ({ todo, setRefresh }) => {
     fetch('http://localhost:8000/todos/' + todo.id, {
       method: 'DELETE',
     }).then(() => {
-      console.log('todo deleted.');
+      console.log('todo deleted.')
       setRefresh(true);
     });
   };
 
   const handleEdit = () => {
-    setIsEditing(true);
+    setIsEditing(true)
   };
 
   const handleEditSave = () => {
-    todo.task = editedtask;
+    todo.task = editedtask
 
     fetch('http://localhost:8000/todos/' + todo.id, {
       method: 'PUT',
@@ -53,15 +53,10 @@ const TodoItem = ({ todo, setRefresh }) => {
       },
       body: JSON.stringify(todo),
     }).then(() => {
-      console.log('todo edited.');
-      setIsEditing(false);
-      setRefresh(true);
+      console.log('todo edited.')
+      setIsEditing(false)
+      setRefresh(true)
     });
-  };
-
-  const handleEditCancel = () => {
-    setEditedtask(todo.task);
-    setIsEditing(false);
   };
 
   return (
@@ -71,19 +66,17 @@ const TodoItem = ({ todo, setRefresh }) => {
           <input type="text" value={editedtask} onChange={(e) => setEditedtask(e.target.value)} />
           <button
             onClick={() => {
-              handleClick('Item berhasil di Edit!');
-              handleEditSave();
+              handleEditSave()
             }}
           >
-            Save
+            Edit
           </button>
-          <button onClick={handleEditCancel}>Cancel</button>
+          
         </div>
       ) : (
         <div
           onClick={() => {
-            handleClick('Item berhasil di Ceklist!');
-            updateTodo();
+            updateTodo()
           }}
         >
           {todo.task}
@@ -93,8 +86,7 @@ const TodoItem = ({ todo, setRefresh }) => {
       <span
         className="close"
         onClick={() => {
-          handleClick('Item berhasil di Hapus!');
-          deleteTodo();
+          deleteTodo()
         }}
       >
         <i className="sampah fa-solid fa-trash"></i>
