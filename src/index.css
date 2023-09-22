@@ -148,10 +148,9 @@ input {
   cursor: pointer;
   transition: 0.3s;
   border-radius: 0;
-<<<<<<< HEAD
+
   margin-top: 20px;
-=======
->>>>>>> 68e14dd78593563606cf25f3185a8a101a283c05
+
 }
 
 .add-button:hover {
