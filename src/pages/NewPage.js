@@ -16,6 +16,7 @@ const Header = () => {
 
   const [task, settask] = useState('');
 
+  // fungsi untuk menambah data todo melalui API ketika tombol "Add" di klik
   const addTodo = () => {
     const newTodo = { task, complete: false };
 
@@ -26,6 +27,7 @@ const Header = () => {
       },
       body: JSON.stringify(newTodo),
     }).then(() => {
+      // ketika sukses menambah data, reset form dengan mengeset state task menjadi empty string
       settask('');
     });
   };
@@ -36,8 +38,8 @@ const Header = () => {
       <Container className="mt-2">
         <Row className="header">
           <div id="todo-header">
-            <h2>TodoInput</h2>
-            <input type="text" value={task} onChange={(e) => settask(e.target.value)} placeholder="Input" />
+            <h2>TodoList</h2>
+            <input type="text" value={task} onChange={(e) => settask(e.target.value)} placeholder="Add Todo..." />
             <span
               className="add-button"
               onClick={() => {

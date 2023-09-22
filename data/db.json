@@ -34,16 +34,6 @@
       "task": "Bayar tagihan bulanan",
       "complete": false,
       "id": 7
-    },
-    {
-      "task": "makan roti",
-      "complete": true,
-      "id": 8
-    },
-    {
-      "task": "yoga",
-      "complete": false,
-      "id": 9
     }
   ]
 }
